@@ -5,12 +5,11 @@ const uri = "mongodb+srv://Hacktues:<Lo6PvbkvwAOAuC3I>@cluster0.z9xqf.mongodb.ne
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
   client.close();
 }
 );
  
-class bezdomnicite{
+class for_handicaped{
     constructor(_location , _type );
 
         await createListing(client,
