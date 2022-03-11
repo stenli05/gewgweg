@@ -1,11 +1,14 @@
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://Hacktues:<Lo6PvbkvwAOAuC3I>@cluster0.z9xqf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+const uri = "mongodb+srv://Hacktues:<>@cluster0.z9xqf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+   
 client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  client.close();
+    const collection = client.db("test").collection("devices");
+client.close();
 }
 );
  
@@ -30,7 +33,9 @@ class for_handicaped{
     }
         };   
     );
+        
     const button = document.querySelectorAll("a");
+    
     buttons.array.forEach(element => {
         
     });
