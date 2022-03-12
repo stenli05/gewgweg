@@ -44,6 +44,38 @@ function initMap() {
     });
 }
 
-// function add(){
+function add() {
+  // placeName = document.getElementById("name").value
+  // longitude = document.getElementById("longitude").value
+  // latitude = document.getElementById("latitude").value
+  // wheelchair = document.getElementById("wheelchair_access").value
+  // sign_lng = document.getElementById("staff_speaking_sign_language").value
 
-// }
+
+  placeName = "Park"
+  longitude = 42
+  latitude = 23
+  wheelchair = true
+  sign_lng = true
+
+  fetch("/new_place",
+  {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({
+      name: placeName, 
+      longitude: longitude,
+      latitude: latitude,
+      staff_speaking_sign_lng: sign_lng,
+      wheelchair_access: wheelchair_access
+    })
+  })
+  .then(function(res){ 
+    console.log(res) 
+    location.reload()
+  })
+  .catch(function(res){ console.log(res) })
+}

@@ -16,6 +16,11 @@ app.get("/data", async (req, res) => {
 	res.send(arr)
 })
 
+// pp.post("/new_place", async (req, res) => {
+//     newPlace = req.body
+//     await addDoc(newPlace)
+// })
+
 // Start the web server and connect to the database
 
 let server
