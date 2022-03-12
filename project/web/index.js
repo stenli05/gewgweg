@@ -49,7 +49,7 @@ function add() {
   longitude = document.getElementById("longitude").value
   latitude = document.getElementById("latitude").value
 
-  if(document.getElementById("wheelchair").value == "yes")
+  if(document.getElementById("wheelchair_access").value == "yes")
   {
     wheelchair = true;
   }

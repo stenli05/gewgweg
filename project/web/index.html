@@ -33,16 +33,27 @@
     <h2>A guide for disabled people designed to help them!</h2>
     <div id="map"></div>
 
-    <label for="bt1 center" >Name:</label>
-    <input type="bt1 center" id="name"/>
-    <label for="bt2 center" >Longitude:</label>
-    <input type="bt2 center" id="longitude"/>
-    <label for="bt3 center">latitude:</label>
-    <input type="bt3 center" id="latitude"/>
-    <label for="bt4 center">Does it have wheelchair place:</label>
-    <input type="bt4 center" id="wheelchair"/>
-    <label for="bt5 center">Does it have staff speaking sign language:</label>
-    <input type="bt5 center" id="staff_speaking_sign_language"/>
+    <div>
+            
+      <div class="form-box">
+      <form id = "all" class="input-group">
+          <input type="text" class="input-field" id="name" placeholder="Name" required><br>
+          <input type="text" class="input-field" id="latitude" placeholder="Latitude" required><br>
+          <input type="text" class="input-field" id="longitude" placeholder="Longtitude" required><br>
+          <input type="text" class="input-field" id="staff_speaking_sign_language" placeholder="Personel speaking sign languag" required><br>
+          <input type="text" class="input-field" id="wheelchair_access" placeholder="Wheelchair access" required>
+          <br><br><br>
+          <!-- <button class="submit-btn" onclick="add()">Add place</button> -->
+      </form>
+      </div>
+  </div>
+
+    <script>
+      function f()
+      {
+        add()
+      }
+      </script>
 
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUfiT_bA2WosrbYQoYpD-QKVJwEcpElOA&callback=initMap&libraries=&v=weekly"
@@ -50,7 +61,7 @@
     ></script>
    
     
-    <button class="bt1 center" onclick="add()">Add</button>
+    <button class="bt1 center" onclick="add()">Add place</button>
 
   </body>
 </html>
