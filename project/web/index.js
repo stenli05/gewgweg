@@ -23,19 +23,20 @@ function initMap() {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
             
-              infowindow.setContent(data[i].name);
+            content = data[i].name
               
               if (data[i].wheelchair_access == true){
-                infowindow.setContent("The location is with wheelchair access.");
+                content += "<br>The location is with wheelchair access."
               }else{
-                infowindow.setContent("The location is not with wheelchair access.");
+                content += "<br>The location is not with wheelchair access."
               }
               if (data[i].staff_speaking_sign_lng == true){
-                infowindow.setContent("The location is equiped with personel speaking sign language.");
+                content += "<br>The location is equipped with personel speaking sign language."
               }else{
-                infowindow.setContent("The location is equiped with personel speaking sign language.");
+                content += "<br>The location is not equipped with personel speaking sign language."
               }
-
+              
+              infowindow.setContent(content)
               infowindow.open(map, marker);
           }
         })(marker, i));
