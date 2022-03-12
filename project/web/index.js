@@ -45,19 +45,17 @@ function initMap() {
 }
 
 function add() {
-  // placeName = document.getElementById("name").value
-  // longitude = document.getElementById("longitude").value
-  // latitude = document.getElementById("latitude").value
-  // wheelchair = document.getElementById("wheelchair_access").value
-  // sign_lng = document.getElementById("staff_speaking_sign_language").value
-
-
-  placeName = "Park"
-  longitude = 42
-  latitude = 23
-  wheelchair = true
-  sign_lng = true
-
+  //  placeName = document.getElementById("name").value
+  //  longitude = document.getElementById("longitude").value
+  //  latitude = document.getElementById("latitude").value
+  //  wheelchair = document.getElementById("wheelchair_access").value
+  //  sign_lng = document.getElementById("staff_speaking_sign_language").value
+    placeName = "Park"
+    longitude = 23.338871
+    latitude = 42.687930
+    wheelchair = true
+    sign_lng = true
+    
   fetch("/new_place",
   {
     headers: {
@@ -70,9 +68,10 @@ function add() {
       longitude: longitude,
       latitude: latitude,
       staff_speaking_sign_lng: sign_lng,
-      wheelchair_access: wheelchair_access
+      wheelchair_access: wheelchair
     })
   })
+  
   .then(function(res){ 
     console.log(res) 
     location.reload()

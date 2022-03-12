@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import database from './database.js'
-import { getDb, getAllDocs } from './dbFunctions.js'
+import { getDb, getAllDocs, addDoc} from './dbFunctions.js'
 const port = 3000
 
 const app = express()
@@ -16,10 +16,11 @@ app.get("/data", async (req, res) => {
 	res.send(arr)
 })
 
-// pp.post("/new_place", async (req, res) => {
-//     newPlace = req.body
-//     await addDoc(newPlace)
-// })
+app.post("/new_place", async (req, res) => {
+	const newPlace = req.body
+    await addDoc(newPlace)
+	res.send(newPlace)
+})
 
 // Start the web server and connect to the database
 
