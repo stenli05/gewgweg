@@ -44,17 +44,27 @@ function initMap() {
     });
 }
 
-function add() {
-  //  placeName = document.getElementById("name").value
-  //  longitude = document.getElementById("longitude").value
-  //  latitude = document.getElementById("latitude").value
-  //  wheelchair = document.getElementById("wheelchair_access").value
-  //  sign_lng = document.getElementById("staff_speaking_sign_language").value
-    placeName = "Park"
-    longitude = 23.338871
-    latitude = 42.687930
-    wheelchair = true
-    sign_lng = true
+function add() {  
+  placeName = document.getElementById("name").value
+  longitude = document.getElementById("longitude").value
+  latitude = document.getElementById("latitude").value
+
+  if(document.getElementById("wheelchair").value == "yes")
+  {
+    wheelchair = true;
+  }
+  else
+  {
+    wheelchair = false;
+  }
+  if(document.getElementById("staff_speaking_sign_language").value == "yes")
+  {
+    sign_lng = true;
+  }
+  else
+  {
+    sign_lng = false;
+  }
     
   fetch("/new_place",
   {
