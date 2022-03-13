@@ -84,6 +84,12 @@ function add() {
   
   .then(function(res){ 
     console.log(res) 
+    document.getElementById("name").value = ""
+    document.getElementById("longitude").value = ""
+    document.getElementById("latitude").value = ""
+    document.getElementById("wheelchair_access").value = ""
+    document.getElementById("staff_speaking_sign_language").value = ""
+    
     location.reload()
   })
   .catch(function(res){ console.log(res) })
